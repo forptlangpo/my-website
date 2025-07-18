@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to My Cool Website!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      padding: 40px 0;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    img {
+      width: 200px;
+      border-radius: 20px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    .button-container {
+      margin-top: 30px;
+    }
+
+    button, a.button {
+      margin: 10px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      background: #00d2ff;
+      color: #000;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    button:hover, a.button:hover {
+      background: #3a7bd5;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #222;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #000;
+      z-index: 1000;
+    }
+
+    .popup button {
+      background: #ff4d4d;
+      color: white;
+    }
+
+    .section {
+      padding: 40px 20px;
+    }
+
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #ffd700;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌟 Welcome! 🌟</h1>
+  </header>
+
+  <img src="https://via.placeholder.com/200" alt="My Photo" />
+
+  <p>Hello! I am <strong>Xien Zweix A. Gawaran</strong>. I am a Grade 7 Perpetualite Student from Grade 7 YEN.</p>
+
+  <div class="button-container">
+    <a href="#about" class="button">About Me</a>
+    <a href="#hobbies" class="button">My Hobbies</a>
+    <a href="#contact" class="button">My Email!</a>
+    <button onclick="openPopup()">Click Me!</button>
+  </div>
+
+  <div class="popup" id="popupBox">
+    <h2>Works!</h2>
+    <p>You clicked the button and it works perfectly! 🎉</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <div id="about" class="section">
+    <h2>About Me</h2>
+    <p>I am a Grade 7 Perpetualite Student that loves to play online games and play basketball.</p>
+  </div>
+
+  <div id="hobbies" class="section">
+    <h2>My Hobbies</h2>
+    <p>I like playing games, talking to my friends, and more.</p>
+  </div>
+
+  <div id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email me at: <strong>xiengawaran@yahoo.com</strong></p>
+  </div>
+
+  <footer>
+    <p>🚀 Created by Xien Zweix A. Gawaran — Grade 7 YEN</p>
+  </footer>
+
+  <script>
+    function openPopup() {
+      document.getElementById("popupBox").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("popupBox").style.display = "none";
+    }
+
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
